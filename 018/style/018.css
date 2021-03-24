@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Noto Sans TC', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+}
+
+body .dialogue {
+  width: 500px;
+  padding: 10px;
+  background-color: #d3c499;
+  border: 10px solid #588faf;
+}
+
+body .dialogue .local,
+body .dialogue .remote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+body .dialogue .local .msg,
+body .dialogue .remote .msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .dialogue .local .msg p,
+body .dialogue .remote .msg p {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  position: relative;
+}
+
+body .dialogue .local {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .dialogue .local .msg {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body .dialogue .local .msg p {
+  margin-right: 20px;
+  margin-left: 80px;
+  background-color: #83c4e9;
+}
+
+body .dialogue .local .msg p:first-child:before {
+  content: '';
+  border: 7px solid transparent;
+  border-left: 7px solid #83c4e9;
+  position: absolute;
+  top: 10px;
+  right: -14px;
+}
+
+body .dialogue .remote .msg p {
+  margin-left: 20px;
+  margin-right: 80px;
+  background-color: #e6dcdc;
+}
+
+body .dialogue .remote .msg p:first-child:before {
+  content: '';
+  border: 7px solid transparent;
+  border-right: 7px solid #e6dcdc;
+  position: absolute;
+  top: 10px;
+  left: -14px;
+}
+
+body .dialogue .avatar .img {
+  width: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+body .dialogue .avatar .img img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+body .dialogue .avatar .name {
+  color: #555;
+  font-size: 0.8rem;
+  text-align: center;
+}
+/*# sourceMappingURL=018.css.map */

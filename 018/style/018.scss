@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Noto Sans TC', sans-serif;
+  box-sizing: border-box;
+}
+
+$localBackgroundColor: rgb(131, 196, 233);
+$remoteBackgroundColor: rgb(230, 220, 220);
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+
+  .dialogue {
+    width: 500px;
+    padding: 10px;
+    background-color: rgb(211, 196, 153);
+    border: 10px solid rgb(88, 143, 175);
+
+    .local,
+    .remote {
+      display: flex;
+      padding: 10px;
+
+      .msg {
+        display: flex;
+        flex-direction: column;
+        //讓文字內容依照長短顯示背景顏色
+        align-items: flex-start;
+
+        p {
+          padding: 10px;
+          margin: 5px 0;
+          border-radius: 10px;
+          position: relative;
+        }
+      }
+    }
+
+    .local {
+      //local 靠右對齊
+      justify-content: flex-end;
+      .msg {
+        //讓msg和avatar調換順序
+        order: -1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        p {
+          margin-right: 20px;
+          margin-left: 80px;
+          background-color: $localBackgroundColor;
+          &:first-child:before {
+            content: '';
+            border: 7px solid transparent;
+            border-left: 7px solid $localBackgroundColor;
+            position: absolute;
+            top: 10px;
+            right: -14px;
+          }
+        }
+      }
+    }
+    .remote {
+      .msg p {
+        margin-left: 20px;
+        margin-right: 80px;
+        background-color: $remoteBackgroundColor;
+
+        &:first-child:before {
+          content: '';
+          border: 7px solid transparent;
+          border-right: 7px solid $remoteBackgroundColor;
+          position: absolute;
+          top: 10px;
+          left: -14px;
+        }
+      }
+    }
+
+    //avatar
+    .avatar {
+      .img {
+        width: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: auto;
+
+        img {
+          width: 100%;
+          vertical-align: middle;
+        }
+      }
+      .name {
+        color: #555;
+        font-size: 0.8rem;
+        text-align: center;
+      }
+    }
+  }
+}
